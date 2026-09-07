@@ -27,7 +27,7 @@ CNAME  www   joelrojo.github.io
 
 `www.valle.land` 301s to apex (GitHub). HTTPS enforced 2026-09-07 after reset-cname minted the cert. GitHub is not sending HSTS on the custom domain, so Chrome can stay on `http://valle.land` (Not Secure + “Certificate is valid”). `index.html` upgrades that hop in-page.
 
-`valle.la` is a 301 to `https://valle.land` (Porkbun URL forward). Do not put Pages records on `.la`. Still parking until the forward is set.
+`valle.la` 301s to `https://valle.land` (Porkbun URL forward, wildcard + path, set 2026-09-07). Do not put Pages records on `.la`.
 - **GoatCounter** — later. Not now. Paths `/` vs `/vision` are why, if we add it. Not Counter.dev. No Google.
 - **Repo visibility** — public so GitHub Pages works on a free plan (same as chingón). The deck will be shared anyway.
 
