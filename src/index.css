@@ -1,0 +1,197 @@
+:root {
+  --obsidian: #1c1c1a;
+  --bone: #e8e0d2;
+  --dust: #a49582;
+  --agave: #59604a;
+  --solar: #c89550;
+  --apricot: #d58c5b;
+  --moon: #34485a;
+  --rust: #873f2d;
+  --font-serif: 'Cormorant Garamond', 'Iowan Old Style', Palatino, Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--obsidian);
+  color: var(--bone);
+}
+
+html {
+  background: var(--obsidian);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* —— splash —— */
+
+.splash {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--obsidian);
+}
+
+.splash img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.splash .vision-mark {
+  position: absolute;
+  right: max(1.25rem, env(safe-area-inset-right));
+  bottom: max(1.1rem, env(safe-area-inset-bottom));
+  z-index: 2;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: lowercase;
+  color: var(--bone);
+  opacity: 0.42;
+  transition: opacity 240ms ease;
+}
+
+.splash .vision-mark:hover,
+.splash .vision-mark:focus-visible {
+  opacity: 0.85;
+}
+
+/* —— vision —— */
+
+.vision-root {
+  background: var(--obsidian);
+}
+
+.vision-stage {
+  position: fixed;
+  inset: 0;
+}
+
+.vision-scroll {
+  position: relative;
+  height: 620vh;
+  pointer-events: none;
+}
+
+.captions {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  padding: 12vh 8vw;
+}
+
+.caption {
+  position: absolute;
+  left: 8vw;
+  right: 8vw;
+  bottom: 14vh;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.caption.is-on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.caption h1,
+.caption p {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--bone);
+  text-shadow: 0 1px 24px rgba(28, 28, 26, 0.55);
+}
+
+.caption h1 {
+  font-size: clamp(2rem, 5.6vw, 4.4rem);
+  letter-spacing: 0.22em;
+  line-height: 1.05;
+}
+
+.caption p {
+  font-size: clamp(1.15rem, 2.4vw, 1.85rem);
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+}
+
+.caption .sub {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+
+.vision-home {
+  position: fixed;
+  left: max(1.25rem, env(safe-area-inset-left));
+  top: max(1rem, env(safe-area-inset-top));
+  z-index: 3;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: lowercase;
+  color: var(--bone);
+  opacity: 0.38;
+  pointer-events: auto;
+}
+
+.vision-home:hover,
+.vision-home:focus-visible {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .caption {
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: 12vh;
+  }
+
+  .caption h1 {
+    letter-spacing: 0.14em;
+  }
+}
