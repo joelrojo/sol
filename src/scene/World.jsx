@@ -164,10 +164,6 @@ function Sky() {
 function Sun() {
   return (
     <group position={[-22, 8, -48]}>
-      <mesh>
-        <sphereGeometry args={[2.1, 24, 24]} />
-        <meshBasicMaterial color="#f0c27a" />
-      </mesh>
       <pointLight color="#d58c5b" intensity={40} distance={90} decay={1.6} />
     </group>
   )

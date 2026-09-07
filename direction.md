@@ -69,7 +69,7 @@ WebGL is the substrate. Do not add Lenis, Theatre, Cannon, photoreal GLBs, or a 
 
 ## Boundaries
 
-- No Google analytics. GoatCounter only, after Pages is live. No cookies, no banner.
+- No Google analytics. GoatCounter later, if we want `/` vs `/vision`. No cookies, no banner.
 - No user accounts. No personalization.
 - Sibling to chingón — shared DNA, different job. Do not import the settle mechanic. Scroll inverts stillness.
 - Personal context: `~/neo`. Project status: `~/neo/work/projects/valle-del-sol.md`.
