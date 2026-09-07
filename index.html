@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Valle del Sol</title>
+    <script>
+      if (location.protocol === 'http:' && /^(www\.)?valle\.land$/i.test(location.hostname)) {
+        location.replace('https://valle.land' + location.pathname + location.search + location.hash)
+      }
+    </script>
     <meta name="theme-color" content="#1C1C1A" />
     <meta name="description" content="A wild mountain in Los Angeles." />
     <link rel="canonical" href="https://valle.land/" />
