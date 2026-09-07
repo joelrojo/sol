@@ -24,7 +24,9 @@ AAAA   @     2606:50c0:8003::153
 CNAME  www   joelrojo.github.io
 ```
 
-`valle.la` is a 301 to `https://valle.land` (Porkbun URL forward). Do not put Pages records on `.la`.
+`www.valle.land` 301s to apex (GitHub). HTTPS enforced 2026-09-07 after reset-cname minted the cert.
+
+`valle.la` is a 301 to `https://valle.land` (Porkbun URL forward). Do not put Pages records on `.la`. Still parking until the forward is set.
 - **GoatCounter** — later. Not now. Paths `/` vs `/vision` are why, if we add it. Not Counter.dev. No Google.
 - **Repo visibility** — public so GitHub Pages works on a free plan (same as chingón). The deck will be shared anyway.
 

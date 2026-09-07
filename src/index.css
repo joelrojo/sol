@@ -56,18 +56,51 @@ a {
 
 .splash {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 100svh;
   overflow: hidden;
-  background: var(--obsidian);
+  background: #141310;
 }
 
-.splash img {
+.splash-wash {
   position: absolute;
-  inset: 0;
+  inset: -18%;
+  pointer-events: none;
+}
+
+.splash-wash img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center 48%;
+  filter: blur(56px) saturate(1.08);
+  transform: scale(1.08);
+  opacity: 0.62;
+}
+
+.splash::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 70%, rgba(213, 140, 91, 0.2), transparent 58%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(52, 72, 90, 0.28), transparent 50%),
+    linear-gradient(180deg, rgba(20, 19, 16, 0.28) 0%, rgba(20, 19, 16, 0.55) 100%);
+}
+
+.splash-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+}
+
+.splash-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .splash .vision-mark {
@@ -182,6 +215,28 @@ a {
 .vision-home:hover,
 .vision-home:focus-visible {
   opacity: 0.85;
+}
+
+@media (min-width: 800px) {
+  .splash-frame {
+    width: min(60rem, 62vw);
+    box-shadow:
+      0 0 0 1px rgba(232, 224, 210, 0.08),
+      0 22px 70px rgba(0, 0, 0, 0.42);
+  }
+}
+
+@media (max-height: 520px) {
+  .splash-frame {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .splash-frame img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100svh;
+  }
 }
 
 @media (max-width: 640px) {
