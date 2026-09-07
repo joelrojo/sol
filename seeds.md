@@ -31,6 +31,10 @@ CNAME  www   joelrojo.github.io
 - **GoatCounter** — later. Not now. Paths `/` vs `/vision` are why, if we add it. Not Counter.dev. No Google.
 - **Repo visibility** — public so GitHub Pages works on a free plan (same as chingón). The deck will be shared anyway.
 
+## Decided (2026-09-07)
+
+- Share / meta: `Tierra meets technology. A living system grown in public at the edge of Los Angeles.`
+
 ## Decided (2026-09-06)
 
 - Place name: Valle del Sol. Doorway: valle.land + valle.la. Tierra Sol set aside.
